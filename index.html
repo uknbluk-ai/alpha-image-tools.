@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Image Tools - AI Image Compressor, Editor & Upscaler | Free Online Tools</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Free AI-powered image tools: compress, edit, upscale & convert images online. Reduce file size by 80%, enhance quality with AI, batch process images. GDPR compliant for European users.">
+    <meta name="keywords" content="image compressor, AI image editor, photo upscaler, image converter, batch image processing, free image tools, online photo editor, reduce image size, AI image enhancer">
+    <meta name="author" content="Alpha Image Tools">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Alpha Image Tools - AI Image Processing Suite | Free Online">
+    <meta property="og:description" content="Free online AI tools for image compression, editing, upscaling and conversion. GDPR compliant for European users. No registration required.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="Alpha Image Tools">
+    
+    <!-- EU Specific SEO -->
+    <meta name="geo.region" content="EU">
+    <meta name="geo.placename" content="Europe">
+    <meta name="geo.position" content="50.110924;8.682127">
+    <meta name="ICBM" content="50.110924, 8.682127">
+    
+    <!-- GDPR Compliance -->
+    <meta name="compliance" content="GDPR, CCPA">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://alphaimagetools.com/">
+    
+    <!-- European Language Alternates -->
+    <link rel="alternate" hreflang="en" href="https://alphaimagetools.com/" />
+    <link rel="alternate" hreflang="de" href="https://alphaimagetools.com/de/" />
+    <link rel="alternate" hreflang="fr" href="https://alphaimagetools.com/fr/" />
+    <link rel="alternate" hreflang="es" href="https://alphaimagetools.com/es/" />
+    <link rel="alternate" hreflang="it" href="https://alphaimagetools.com/it/" />
+    <link rel="alternate" hreflang="x-default" href="https://alphaimagetools.com/" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- React and ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- Babel for JSX transformation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <style>
+        .spinner {
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .progress-bar {
+            transition: width 0.3s ease-in-out;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* SEO Optimized hidden content for search engines */
+        .seo-content {
+            position: absolute;
+            left: -10000px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            color: #000;
+            background: #fff;
+        }
+        
+        /* Custom color themes */
+        .theme-modern { --accent-color: #0d9488; }
+        .theme-professional { --accent-color: #2563eb; }
+        .theme-creative { --accent-color: #7c3aed; }
+        .theme-minimal { --accent-color: #6b7280; }
+        
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .mobile-padding {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            .mobile-stack {
+                flex-direction: column;
+            }
+            .mobile-full-width {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="gradient-bg text-white min-h-screen">
+    <!-- SEO Optimized Hidden Content for Search Engines -->
+    <div class="seo-content">
+        <h1>Alpha Image Tools - Free AI-Powered Image Processing Tools</h1>
+        <h2>Online Image Compressor, Editor, Upscaler and Converter for European Users</h2>
+        <p>Free online AI image tools for European users. Compress images to reduce file size, edit photos with AI, upscale image resolution, convert between formats. GDPR compliant image processing. No registration required.</p>
+        
+        <h3>Main Features:</h3>
+        <ul>
+            <li>AI Image Compression - Reduce file size up to 80% without quality loss</li>
+            <li>AI Photo Editing - Edit images using text prompts and AI technology</li>
+            <li>Image Upscaling - Increase resolution 4x with artificial intelligence</li>
+            <li>Format Conversion - Convert between WebP, PNG, JPG, AVIF formats</li>
+            <li>Batch Processing - Process multiple images simultaneously</li>
+            <li>Cloud Integration - Connect with Dropbox, Google Drive, OneDrive, iCloud</li>
+            <li>GDPR Compliant - Safe for European users, no data storage</li>
+            <li>No Registration Required - Free to use immediately</li>
+        </ul>
+        
+        <h3>Supported Countries:</h3>
+        <p>Germany, France, Spain, Italy, United Kingdom, Netherlands, Belgium, Sweden, Norway, Denmark, Finland, Austria, Switzerland, Poland, Czech Republic, Hungary, Romania, Bulgaria, Greece, Portugal, Ireland, and all European Union countries.</p>
+        
+        <h3>How to Use Alpha Image Tools:</h3>
+        <ol>
+            <li>Upload your image or multiple images</li>
+            <li>Choose your desired tool: Compressor, Editor, Upscaler, or Converter</li>
+            <li>Adjust settings according to your needs</li>
+            <li>Process the image with AI technology</li>
+            <li>Download the processed image instantly</li>
+        </ol>
+        
+        <h3>Benefits for European Users:</h3>
+        <ul>
+            <li>GDPR Compliant - Your data is safe and secure</li>
+            <li>Fast Processing - Optimized servers in Europe</li>
+            <li>Multiple Language Support - English, German, French, Spanish, Italian</li>
+            <li>Free to Use - No hidden costs or subscriptions</li>
+            <li>No Watermarks - Clean, professional results</li>
+        </ul>
+        
+        <p><strong>Keywords:</strong> free image compressor, AI photo editor, image upscaler online, format converter, batch image processor, European image tools, GDPR compliant image processing, online photo tools, reduce image size, enhance photo quality, AI image enhancement, WebP converter, PNG to JPG, image optimization tools</p>
+    </div>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+
+        // Extended translations with SEO optimized content
+        const translations = {
+            en: {
+                title: "Alpha Image Tools",
+                subtitle: "AI-Powered Image Processing",
+                compressor: "Compressor",
+                editor: "Editor", 
+                upscaler: "Upscaler",
+                converter: "Converter",
+                analytics: "Analytics",
+                batch: "Batch",
+                cloud: "Cloud",
+                settings: "Settings",
+                upload: "Click to upload or drag and drop",
+                uploadDesc: "PNG, JPG, WEBP (Max 10MB)",
+                quality: "Quality",
+                compress: "Compress",
+                compressing: "Compressing...",
+                reset: "Reset",
+                download: "Download",
+                processed: "Done",
+                editPrompt: "Describe edits...",
+                applyEdit: "Apply AI Edit",
+                editing: "Editing...",
+                upscale: "Upscale",
+                upscaling: "Upscaling...",
+                language: "Language",
+                fileSize: "Size",
+                original: "Original",
+                edited: "Edited",
+                convert: "Convert",
+                converting: "Converting...",
+                format: "Format",
+                privacySettings: "Privacy Settings",
+                allowDataCollection: "Allow anonymous data collection",
+                acceptCookies: "Accept necessary cookies",
+                totalSaved: "Total Saved",
+                imagesProcessed: "Images Processed",
+                brightness: "Brightness",
+                contrast: "Contrast",
+                saturation: "Saturation",
+                applyToAll: "Apply to all images",
+                preserveStructure: "Preserve folder structure",
+                connect: "Connect",
+                disconnect: "Disconnect",
+                share: "Share",
+                history: "History",
+                clearHistory: "Clear History",
+                theme: "Theme",
+                accentColor: "Accent Color",
+                // SEO enhanced descriptions
+                seoDescription: "Free AI-powered image tools for compression, editing, upscaling and conversion. GDPR compliant for European users.",
+                feature1: "AI Image Compression - Reduce file size up to 80%",
+                feature2: "AI Photo Editing - Edit with text prompts",
+                feature3: "Image Upscaling - Increase resolution 4x with AI",
+                feature4: "Format Conversion - WebP, PNG, JPG, AVIF"
+            },
+            de: {
+                title: "Alpha Bild Tools",
+                subtitle: "KI-Bildverarbeitung",
+                compressor: "Kompressor",
+                editor: "Editor",
+                upscaler: "Upscaler",
+                converter: "Konverter",
+                analytics: "Analytik",
+                batch: "Stapel",
+                cloud: "Cloud",
+                settings: "Einstellungen",
+                upload: "Klicken oder Drag & Drop",
+                uploadDesc: "PNG, JPG, WEBP (Max. 10MB)",
+                quality: "Qualität",
+                compress: "Komprimieren",
+                compressing: "Wird komprimiert...",
+                reset: "Zurücksetzen",
+                download: "Herunterladen",
+                processed: "Fertig",
+                editPrompt: "Bearbeitung beschreiben...",
+                applyEdit: "KI-Bearbeitung",
+                editing: "Bearbeitung läuft...",
+                upscale: "Hochskalieren",
+                upscaling: "Hochskalierung...",
+                language: "Sprache",
+                fileSize: "Größe",
+                original: "Original",
+                edited: "Bearbeitet",
+                convert: "Konvertieren",
+                converting: "Konvertierung...",
+                format: "Format",
+                privacySettings: "Datenschutzeinstellungen",
+                allowDataCollection: "Anonyme Datensammlung erlauben",
+                acceptCookies: "Notwendige Cookies akzeptieren",
+                totalSaved: "Gespart gesamt",
+                imagesProcessed: "Bilder verarbeitet",
+                brightness: "Helligkeit",
+                contrast: "Kontrast",
+                saturation: "Sättigung",
+                applyToAll: "Auf alle Bilder anwenden",
+                preserveStructure: "Ordnerstruktur beibehalten",
+                connect: "Verbinden",
+                disconnect: "Trennen",
+                share: "Teilen",
+                history: "Verlauf",
+                clearHistory: "Verlauf löschen",
+                theme: "Thema",
+                accentColor: "Akzentfarbe",
+                seoDescription: "Kostenlose KI-Bildtools für Komprimierung, Bearbeitung, Upscaling und Konvertierung. DSGVO-konform für europäische Nutzer.",
+                feature1: "KI-Bildkomprimierung - Dateigröße um bis zu 80% reduzieren",
+                feature2: "KI-Fotobearbeitung - Mit Textbefehlen bearbeiten",
+                feature3: "Bild-Upscaling - Auflösung mit KI 4-fach erhöhen",
+                feature4: "Formatkonvertierung - WebP, PNG, JPG, AVIF"
+            },
+            fr: {
+                title: "Alpha Outils Image",
+                subtitle: "Traitement d'images IA",
+                compressor: "Compresseur",
+                editor: "Éditeur",
+                upscaler: "Upscaler",
+                converter: "Convertisseur",
+                analytics: "Analytique",
+                batch: "Lot",
+                cloud: "Cloud",
+                settings: "Paramètres",
+                upload: "Cliquer ou glisser-déposer",
+                uploadDesc: "PNG, JPG, WEBP (Max 10MB)",
+                quality: "Qualité",
+                compress: "Compresser",
+                compressing: "Compression...",
+                reset: "Réinitialiser",
+                download: "Télécharger",
+                processed: "Terminé",
+                editPrompt: "Décrire les modifications...",
+                applyEdit: "Application IA",
+                editing: "Édition...",
+                upscale: "Augmenter",
+                upscaling: "Augmentation...",
+                language: "Langue",
+                fileSize: "Taille",
+                original: "Original",
+                edited: "Édité",
+                convert: "Convertir",
+                converting: "Conversion...",
+                format: "Format",
+                privacySettings: "Paramètres de confidentialité",
+                allowDataCollection: "Autoriser la collecte de données anonymes",
+                acceptCookies: "Accepter les cookies nécessaires",
+                totalSaved: "Total économisé",
+                imagesProcessed: "Images traitées",
+                brightness: "Luminosité",
+                contrast: "Contraste",
+                saturation: "Saturation",
+                applyToAll: "Appliquer à toutes les images",
+                preserveStructure: "Préserver la structure des dossiers",
+                connect: "Connecter",
+                disconnect: "Déconnecter",
+                share: "Partager",
+                history: "Historique",
+                clearHistory: "Effacer l'historique",
+                theme: "Thème",
+                accentColor: "Couleur d'accent",
+                seoDescription: "Outils d'image IA gratuits pour la compression, l'édition, l'upscaling et la conversion. Conforme RGPD pour les utilisateurs européens.",
+                feature1: "Compression d'image IA - Réduire la taille des fichiers jusqu'à 80%",
+                feature2: "Édition photo IA - Modifier avec des invites texte",
+                feature3: "Upscaling d'image - Augmenter la résolution 4x avec l'IA",
+                feature4: "Conversion de format - WebP, PNG, JPG, AVIF"
+            },
+            es: {
+                title: "Herramientas de Imagen Alpha",
+                subtitle: "Procesamiento de Imágenes con IA",
+                compressor: "Compresor",
+                editor: "Editor",
+                upscaler: "Escalador",
+                converter: "Convertidor",
+                analytics: "Analíticas",
+                batch: "Lote",
+                cloud: "Nube",
+                settings: "Ajustes",
+                upload: "Hacer clic o arrastrar y soltar",
+                uploadDesc: "PNG, JPG, WEBP (Máx. 10MB)",
+                quality: "Calidad",
+                compress: "Comprimir",
+                compressing: "Comprimiendo...",
+                reset: "Reiniciar",
+                download: "Descargar",
+                processed: "Completado",
+                editPrompt: "Describir ediciones...",
+                applyEdit: "Aplicar edición IA",
+                editing: "Editando...",
+                upscale: "Escalar",
+                upscaling: "Escalando...",
+                language: "Idioma",
+                fileSize: "Tamaño",
+                original: "Original",
+                edited: "Editado",
+                convert: "Convertir",
+                converting: "Convirtiendo...",
+                format: "Formato",
+                privacySettings: "Configuración de privacidad",
+                allowDataCollection: "Permitir recopilación de datos anónimos",
+                acceptCookies: "Aceptar cookies necesarias",
+                totalSaved: "Total ahorrado",
+                imagesProcessed: "Imágenes procesadas",
+                brightness: "Brillo",
+                contrast: "Contraste",
+                saturation: "Saturación",
+                applyToAll: "Aplicar a todas las imágenes",
+                preserveStructure: "Preservar estructura de carpetas",
+                connect: "Conectar",
+                disconnect: "Desconectar",
+                share: "Compartir",
+                history: "Historial",
+                clearHistory: "Limpiar historial",
+                theme: "Tema",
+                accentColor: "Color de acento",
+                seoDescription: "Herramientas de imagen con IA gratuitas para compresión, edición, escalado y conversión. Cumple con el RGPD para usuarios europeos.",
+                feature1: "Compresión de imagen IA - Reducir tamaño de archivo hasta 80%",
+                feature2: "Edición de foto IA - Editar con prompts de texto",
+                feature3: "Escalado de imagen - Aumentar resolución 4x con IA",
+                feature4: "Conversión de formato - WebP, PNG, JPG, AVIF"
+            },
+            it: {
+                title: "Strumenti Immagine Alpha",
+                subtitle: "Elaborazione Immagini con IA",
+                compressor: "Compressore",
+                editor: "Editor",
+                upscaler: "Upscaler",
+                converter: "Convertitore",
+                analytics: "Analitica",
+                batch: "Batch",
+                cloud: "Cloud",
+                settings: "Impostazioni",
+                upload: "Clicca o trascina e rilascia",
+                uploadDesc: "PNG, JPG, WEBP (Max 10MB)",
+                quality: "Qualità",
+                compress: "Comprimi",
+                compressing: "Compressione...",
+                reset: "Ripristina",
+                download: "Scarica",
+                processed: "Completato",
+                editPrompt: "Descrivi le modifiche...",
+                applyEdit: "Applica modifica IA",
+                editing: "Modifica in corso...",
+                upscale: "Ingrandisci",
+                upscaling: "Ingrandimento...",
+                language: "Lingua",
+                fileSize: "Dimensione",
+                original: "Originale",
+                edited: "Modificato",
+                convert: "Converti",
+                converting: "Conversione...",
+                format: "Formato",
+                privacySettings: "Impostazioni privacy",
+                allowDataCollection: "Consenti raccolta dati anonimi",
+                acceptCookies: "Accetta cookie necessari",
+                totalSaved: "Totale risparmiato",
+                imagesProcessed: "Immagini elaborate",
+                brightness: "Luminosità",
+                contrast: "Contrasto",
+                saturation: "Saturazione",
+                applyToAll: "Applica a tutte le immagini",
+                preserveStructure: "Mantieni struttura cartelle",
+                connect: "Connetti",
+                disconnect: "Disconnetti",
+                share: "Condividi",
+                history: "Cronologia",
+                clearHistory: "Cancella cronologia",
+                theme: "Tema",
+                accentColor: "Colore accento",
+                seoDescription: "Strumenti di immagini IA gratuiti per compressione, modifica, upscaling e conversione. Conforme al GDPR per utenti europei.",
+                feature1: "Compressione immagine IA - Riduci dimensione file fino all'80%",
+                feature2: "Modifica foto IA - Modifica con comandi testuali",
+                feature3: "Upscaling immagine - Aumenta risoluzione 4x con IA",
+                feature4: "Conversione formato - WebP, PNG, JPG, AVIF"
+            }
+        };
+
+        function App() {
+            const [activeTool, setActiveTool] = useState('compressor');
+            const [language, setLanguage] = useState('en');
+            const [darkMode, setDarkMode] = useState(true);
+            const [theme, setTheme] = useState('modern');
+            const [accentColor, setAccentColor] = useState('#0d9488');
+
+            const [t, setT] = useState(translations.en);
+
+            useEffect(() => {
+                setT(translations[language]);
+                
+                // Update page title and meta description for SEO
+                document.title = `Alpha Image Tools - ${t.title} | Free AI Image Processing`;
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) {
+                    metaDesc.setAttribute('content', t.seoDescription);
+                }
+                
+                // Update language attribute for SEO
+                document.documentElement.lang = language;
+                
+            }, [language, t]);
+
+            const tools = [
+                { id: 'compressor', name: t.compressor, icon: '📦', description: t.feature1 },
+                { id: 'editor', name: t.editor, icon: '🎨', description: t.feature2 },
+                { id: 'upscaler', name: t.upscaler, icon: '🔍', description: t.feature3 },
+                { id: 'converter', name: t.converter, icon: '🔄', description: t.feature4 },
+                { id: 'batch', name: t.batch, icon: '📚', description: "Process multiple images at once" },
+                { id: 'analytics', name: t.analytics, icon: '📊', description: "Track your image processing statistics" },
+                { id: 'cloud', name: t.cloud, icon: '☁️', description: "Connect with cloud storage services" },
+                { id: 'settings', name: t.settings, icon: '⚙️', description: "Customize your experience" }
+            ];
+
+            return (
+                <div className={`min-h-screen flex flex-col ${darkMode ? 'gradient-bg text-white' : 'bg-gray-50 text-gray-900'}`}>
+                    {/* Header with SEO rich content */}
+                    <header className="py-4 mobile-padding border-b border-gray-800">
+                        <div className="flex flex-col items-center space-y-4">
+                            <div className="text-center">
+                                <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-500">
+                                    {t.title} - AI Image Tools
+                                </h1>
+                                <p className="text-gray-300 text-sm">
+                                    {t.subtitle} | Free Online Tools for European Users
+                                </p>
+                            </div>
+                            
+                            <div className="flex space-x-2 w-full max-w-xs">
+                                <select 
+                                    value={language}
+                                    onChange={(e) => setLanguage(e.target.value)}
+                                    className="flex-1 py-2 bg-gray-800 text-white border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm"
+                                    aria-label="Select Language"
+                                >
+                                    <option value="en">English</option>
+                                    <option value="de">Deutsch</option>
+                                    <option value="fr">Français</option>
+                                    <option value="es">Español</option>
+                                    <option value="it">Italiano</option>
+                                </select>
+                                
+                                <button
+                                    onClick={() => setDarkMode(!darkMode)}
+                                    className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors"
+                                    aria-label="Toggle dark mode"
+                                >
+                                    {darkMode ? '🌙' : '☀️'}
+                                </button>
+                            </div>
+                        </div>
+                    </header>
+
+                    {/* Tool Selector with ARIA labels */}
+                    <div className="flex justify-center my-4 mobile-padding">
+                        <div className="rounded-2xl p-2 flex space-x-2 w-full max-w-4xl overflow-x-auto glass-effect">
+                            {tools.map(tool => (
+                                <button
+                                    key={tool.id}
+                                    onClick={() => setActiveTool(tool.id)}
+                                    className={`px-4 py-3 rounded-xl font-semibold transition-all duration-200 flex items-center justify-center space-x-2 flex-shrink-0 ${
+                                        activeTool === tool.id
+                                            ? 'bg-teal-500 text-white shadow-lg'
+                                            : 'text-gray-300 hover:bg-gray-700'
+                                    }`}
+                                    aria-label={`Switch to ${tool.name} tool`}
+                                    aria-current={activeTool === tool.id ? 'page' : undefined}
+                                >
+                                    <span aria-hidden="true">{tool.icon}</span>
+                                    <span className="text-sm">{tool.name}</span>
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Main Content with structured data */}
+                    <main className="flex-1 mobile-padding pb-6" role="main">
+                        {activeTool === 'compressor' && <CompressorView darkMode={darkMode} t={t} />}
+                        {activeTool === 'editor' && <EditorView darkMode={darkMode} t={t} />}
+                        {activeTool === 'upscaler' && <UpscalerView darkMode={darkMode} t={t} />}
+                        {activeTool === 'converter' && <ConverterView darkMode={darkMode} t={t} />}
+                        {activeTool === 'batch' && <BatchView darkMode={darkMode} t={t} />}
+                        {activeTool === 'analytics' && <AnalyticsView darkMode={darkMode} t={t} />}
+                        {activeTool === 'cloud' && <CloudView darkMode={darkMode} t={t} />}
+                        {activeTool === 'settings' && <SettingsView darkMode={darkMode} t={t} theme={theme} setTheme={setTheme} accentColor={accentColor} setAccentColor={setAccentColor} />}
+                    </main>
+
+                    {/* Footer with SEO links */}
+                    <footer className="py-4 border-t border-gray-800 mobile-padding">
+                        <div className="text-center">
+                            <p className="text-gray-400 text-sm">
+                                © 2024 Alpha Image Tools - GDPR Compliant | Free AI Image Processing Tools for European Users
+                            </p>
+                            <div className="mt-2 flex justify-center space-x-4 text-xs text-gray-500">
+                                <span>Image Compressor</span>
+                                <span>Photo Editor</span>
+                                <span>AI Upscaler</span>
+                                <span>Format Converter</span>
+                                <span>Batch Processor</span>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            );
+        }
+
+        function ImageUpload({ onImageSelect, darkMode, t, multiple = true }) {
+            const [isDragging, setIsDragging] = useState(false);
+
+            const handleFileChange = (event) => {
+                const files = Array.from(event.target.files);
+                if (files.length > 0) {
+                    onImageSelect(files);
+                }
+            };
+
+            const handleDrop = (event) => {
+                event.preventDefault();
+                setIsDragging(false);
+                const files = Array.from(event.dataTransfer.files).filter(file => 
+                    file.type.startsWith('image/')
+                );
+                if (files.length > 0) {
+                    onImageSelect(files);
+                }
+            };
+
+            const handleDragOver = (event) => {
+                event.preventDefault();
+                setIsDragging(true);
+            };
+
+            const handleDragLeave = (event) => {
+                event.preventDefault();
+                setIsDragging(false);
+            };
+
+            return (
+                <div className="w-full">
+                    <label 
+                        htmlFor="image-upload"
+                        className={`flex flex-col items-center justify-center w-full h-48 border-2 border-dashed rounded-2xl cursor-pointer transition-all duration-200 ${
+                            isDragging 
+                                ? 'border-teal-400 bg-teal-500 bg-opacity-10' 
+                                : 'border-gray-600 glass-effect hover:border-teal-400'
+                        }`}
+                        onDrop={handleDrop}
+                        onDragOver={handleDragOver}
+                        onDragLeave={handleDragLeave}
+                    >
+                        <div className="text-center p-4">
+                            <div className="text-3xl mb-2">📁</div>
+                            <p className="text-gray-300 mb-1">
+                                <span className="text-teal-400 font-semibold">{t.upload}</span>
+                            </p>
+                            <p className="text-gray-400 text-xs">
+                                {t.uploadDesc}
+                            </p>
+                        </div>
+                        <input 
+                            id="image-upload"
+                            type="file" 
+                            className="hidden" 
+                            accept="image/*" 
+                            onChange={handleFileChange} 
+                            multiple={multiple}
+                        />
+                    </label>
+                </div>
+            );
+        }
+
+        function CompressorView({ darkMode, t }) {
+            const [images, setImages] = useState([]);
+            const [isProcessing, setIsProcessing] = useState(false);
+            const [quality, setQuality] = useState(80);
+
+            const handleImageSelect = (files) => {
+                const newImages = files.map(file => ({
+                    id: Math.random().toString(36).substr(2, 9),
+                    file,
+                    url: URL.createObjectURL(file),
+                    compressedUrl: null,
+                    loading: false,
+                    originalSize: file.size,
+                    compressedSize: null,
+                    progress: 0
+                }));
+                setImages(newImages);
+            };
+
+            const handleCompress = async () => {
+                if (images.length === 0) return;
+                
+                setIsProcessing(true);
+                
+                for (let image of images) {
+                    if (image.compressedUrl) continue;
+                    
+                    setImages(prev => prev.map(img => 
+                        img.id === image.id ? { ...img, loading: true, progress: 0 } : img
+                    ));
+                    
+                    // Simulate compression
+                    for (let progress = 0; progress <= 100; progress += 10) {
+                        await new Promise(resolve => setTimeout(resolve, 100));
+                        setImages(prev => prev.map(img => 
+                            img.id === image.id ? { ...img, progress } : img
+                        ));
+                    }
+                    
+                    // Simulate result
+                    const compressedSize = image.originalSize * (quality / 100);
+                    
+                    setImages(prev => prev.map(img => 
+                        img.id === image.id ? { 
+                            ...img, 
+                            compressedUrl: img.url,
+                            loading: false,
+                            progress: 100,
+                            compressedSize: compressedSize
+                        } : img
+                    ));
+                }
+                
+                setIsProcessing(false);
+            };
+
+            const handleDownload = (image) => {
+                if (!image.compressedUrl) return;
+                
+                const link = document.createElement('a');
+                link.href = image.compressedUrl;
+                link.download = `compressed_${image.file.name}`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            };
+
+            const handleReset = () => {
+                images.forEach(img => URL.revokeObjectURL(img.url));
+                setImages([]);
+            };
+
+            return (
+                <div className="max-w-2xl mx-auto">
+                    {images.length === 0 ? (
+                        <div className="text-center space-y-4">
+                            <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-500">
+                                {t.compressor}
+                            </h2>
+                            <p className="text-gray-300 text-sm">
+                                Reduce image file sizes with AI compression - Save up to 80% storage space
+                            </p>
+                            <ImageUpload onImageSelect={handleImageSelect} darkMode={darkMode} t={t} />
+                        </div>
+                    ) : (
+                        <div className="space-y-4 fade-in">
+                            {/* Controls */}
+                            <div className="rounded-2xl p-4 glass-effect">
+                                <div className="space-y-4">
+                                    <div>
+                                        <label className="block text-sm font-medium mb-2 text-gray-300">
+                                            {t.quality}: {quality}%
+                                        </label>
+                                        <input
+                                            type="range"
+                                            min="1"
+                                            max="100"
+                                            value={quality}
+                                            onChange={(e) => setQuality(e.target.value)}
+                                            className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-teal-500 bg-gray-700"
+                                            disabled={isProcessing}
+                                        />
+                                    </div>
+                                    
+                                    <div className="flex space-x-2">
+                                        <button
+                                            onClick={handleCompress}
+                                            disabled={isProcessing}
+                                            className="flex-1 py-3 bg-teal-500 hover:bg-teal-600 disabled:bg-teal-800 text-white font-semibold rounded-xl transition-colors flex items-center justify-center space-x-2"
+                                        >
+                                            {isProcessing ? (
+                                                <>
+                                                    <div className="spinner h-4 w-4 border-2 border-white border-t-transparent rounded-full"></div>
+                                                    <span className="text-sm">{t.compressing}</span>
+                                                </>
+                                            ) : (
+                                                <span className="text-sm">{t.compress}</span>
+                                            )}
+                                        </button>
+                                        
+                                        <button
+                                            onClick={handleReset}
+                                            className="px-4 py-3 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-xl transition-colors"
+                                        >
+                                            <span className="text-sm">{t.reset}</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Image Grid */}
+                            <div className="grid grid-cols-1 gap-4">
+                                {images.map(image => (
+                                    <div key={image.id} className="rounded-2xl overflow-hidden glass-effect">
+                                        <div className="relative aspect-square">
+                                            {image.loading && (
+                                                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
+                                                    <div className="text-center">
+                                                        <div className="spinner h-8 w-8 border-4 border-teal-500 border-t-transparent rounded-full mx-auto mb-2"></div>
+                                                        <p className="text-sm text-white">{image.progress}%</p>
+                                                    </div>
+                                                </div>
+                                            )}
+                                            <img 
+                                                src={image.url} 
+                                                alt={image.file.name}
+                                                className="w-full h-full object-cover"
+                                            />
+                                            {image.compressedUrl && (
+                                                <div className="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs">
+                                                    {t.processed}
+                                                </div>
+                                            )}
+                                        </div>
+                                        
+                                        <div className="p-4">
+                                            <p className="text-sm truncate mb-2 text-gray-300">
+                                                {image.file.name}
+                                            </p>
+                                            <div className="space-y-2 mb-3">
+                                                <div className="flex justify-between text-xs">
+                                                    <span className="text-gray-400">
+                                                        {t.fileSize}: {(image.originalSize / 1024 / 1024).toFixed(2)}MB
+                                                    </span>
+                                                    {image.compressedSize && (
+                                                        <span className="text-green-500">
+                                                            {(image.compressedSize / 1024 / 1024).toFixed(2)}MB
+                                                        </span>
+                                                    )}
+                                                </div>
+                                                {image.loading && (
+                                                    <div className="w-full bg-gray-700 rounded-full h-2">
+                                                        <div 
+                                                            className="bg-teal-500 h-2 rounded-full progress-bar" 
+                                                            style={{ width: `${image.progress}%` }}
+                                                        ></div>
+                                                    </div>
+                                                )}
+                                            </div>
+                                            
+                                            {image.compressedUrl && (
+                                                <button
+                                                    onClick={() => handleDownload(image)}
+                                                    className="w-full py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-colors"
+                                                >
+                                                    {t.download}
+                                                </button>
+                                            )}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        function EditorView({ darkMode, t }) {
+            const [images, setImages] = useState([]);
+            const [prompt, setPrompt] = useState('');
+            const [isProcessing, setIsProcessing] = useState(false);
+            const [brightness, setBrightness] = useState(100);
+            const [contrast, setContrast] = useState(100);
+            const [saturation, setSaturation] = useState(100);
+
+            const handleImageSelect = (files) => {
+                const newImages = files.map(file => ({
+                    id: Math.random().toString(36).substr(2, 9),
+                    file,
+                    url: URL.createObjectURL(file),
+                    editedUrl: null,
+                    loading: false,
+                    progress: 0
+                }));
+                setImages(newImages);
+            };
+
+            const handleEdit = async () => {
+                if (images.length === 0) return;
+                
+                setIsProcessing(true);
+                
+                for (let image of images) {
+                    if (image.editedUrl) continue;
+                    
+                    setImages(prev => prev.map(img => 
+                        img.id === image.id ? { ...img, loading: true, progress: 0 } : img
+                    ));
+                    
+                    // Simulate AI editing
+                    for (let progress = 0; progress <= 100; progress += 20) {
+                        await new Promise(resolve => setTimeout(resolve, 200));
+                        setImages(prev => prev.map(img => 
+                            img.id === image.id ? { ...img, progress } : img
+                        ));
+                    }
+                    
+                    // Simulate result
+                    setImages(prev => prev.map(img => 
+                        img.id === image.id ? { 
+                            ...img, 
+                            editedUrl: img.url,
+                            loading: false,
+                            progress: 100
+                        } : img
+                    ));
+                }
+                
+                setIsProcessing(false);
+            };
+
+            const handleDownload = (image) => {
+                if (!image.editedUrl) return;
+                
+                const link = document.createElement('a');
+                link.href = image.editedUrl;
+                link.download = `edited_${image.file.name}`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            };
+
+            const handleReset = () => {
+                images.forEach(img => URL.revokeObjectURL(img.url));
+                setImages([]);
+                setPrompt('');
+            };
+
+            return (
+                <div className="max-w-2xl mx-auto">
+                    {images.length === 0 ? (
+                        <div className="text-center space-y-4">
+                            <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-500">
+                                {t.editor}
+                            </h2>
+                            <p className="text-gray-300 text-sm">
+                                Edit images with AI using text prompts - Transform your photos with artificial intelligence
+                            </p>
+                            <ImageUpload onImageSelect={handleImageSelect} darkMode={darkMode} t={t} />
+                        </div>
+                    ) : (
+                        <div className="space-y-4 fade-in">
+                            {/* Controls */}
+                            <div className="rounded-2xl p-4 glass-effect">
+                                <textarea
+                                    value={prompt}
+                                    onChange={(e) => setPrompt(e.target.value)}
+                                    placeholder={t.editPrompt}
+                                    className="w-full h-24 rounded-xl p-4 resize-none focus:outline-none focus:ring-2 focus:ring-teal-500 bg-gray-800 border border-gray-600 text-white text-sm"
+                                />
+                                
+                                <div className="grid grid-cols-3 gap-4 mt-4">
+                                    <div>
+                                        <label className="block text-sm font-medium mb-2 text-gray-300">
+                                            {t.brightness}: {brightness}%
+                                        </label>
+                                        <input
+                                            type="range"
+                                            min="0"
+                                            max="200"
+                                            value={brightness}
+                                            onChange={(e) => setBrightness(e.target.value)}
+                                            className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-teal-500 bg-gray-700"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium mb-2 text-gray-300">
+                                            {t.contrast}: {contrast}%
+                                        </label>
+                                        <input
+                                            type="range"
+                                            min="0"
+                                            max="200"
+                                            value={contrast}
+                                            onChange={(e) => setContrast(e.target.value)}
+                                            className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-teal-500 bg-gray-700"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium mb-2 text-gray-300">
+                                            {t.saturation}: {saturation}%
+                                        </label>
+                                        <input
+                                            type="range"
+                                            min="0"
+                                            max="200"
+                                            value={saturation}
+                                            onChange={(e) => setSaturation(e.target.value)}
+                                            className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-teal-500 bg-gray-700"
+                                        />
+                                    </div>
+                                </div>
+                                
+                                <div className="flex space-x-2 mt-4">
+                                    <button 
+                                        onClick={handleEdit}
+                                        disabled={isProcessing}
+                                        className="flex-1 py-3 bg-teal-500 hover:bg-teal-600 disabled:bg-teal-800 text-white font-semibold rounded-xl transition-colors flex items-center justify-center space-x-2"
+                                    >
+                                        {isProcessing ? (
+                                            <>
+                                                <div className="spinner h-4 w-4 border-2 border-white border-t-transparent rounded-full"></div>
+                                                <span className="text-sm">{t.editing}</span>
+                                            </>
+                                        ) : (
+                                            <span className="text-sm">{t.applyEdit}</span>
+                                        )}
+                                    </button>
+                                    
+                                    <button
+                                        onClick={handleReset}
+                                        className="px-4 py-3 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-xl transition-colors"
+                                    >
+                                        <span className="text-sm">{t.reset}</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            {/* Image Grid */}
+                            <div className="grid grid-cols-1 gap-4">
+                                {images.map(image => (
+                                    <div key={image.id} className="rounded-2xl overflow-hidden glass-effect">
+                                        <div className="relative aspect-square">
+                                            {image.loading && (
+                                                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
+                                                    <div className="text-center">
+                                                        <div className="spinner h-8 w-8 border-4 border-teal-500 border-t-transparent rounded-full mx-auto mb-2"></div>
+                                                        <p className="text-sm text-white">{image.progress}%</p>
+                                                    </div>
+                                                </div>
+                                            )}
+                                            <img 
+                                                src={image.editedUrl || image.url} 
+                                                alt={image.file.name}
+                                                className="w-full h-full object-cover"
+                                            />
+                                            {image.editedUrl && (
+                                                <div className="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs">
+                                                    {t.processed}
+                                                </div>
+                                            )}
+                                        </div>
+                                        
+                                        <div className="p-4">
+                                            <p className="text-sm truncate mb-2 text-gray-300">
+                                                {image.file.name}
+                                            </p>
+                                            <div className="space-y-2 mb-3">
+                                                <div className="flex justify-between text-xs">
+                                                    <span className="text-gray-400">
+                                                        {image.editedUrl ? t.edited : t.original}
+                                                    </span>
+                                                </div>
+                                                {image.loading && (
+                                                    <div className="w-full bg-gray-700 rounded-full h-2">
+                                                        <div 
+                                                            className="bg-teal-500 h-2 rounded-full progress-bar" 
+                                                            style={{ width: `${image.progress}%` }}
+                                                        ></div>
+                                                    </div>
+                                                )}
+                                            </div>
+                                            
+                                            {image.editedUrl && (
+                                                <button
+                                                    onClick={() => handleDownload(image)}
+                                                    className="w-full py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-colors"
+                                                >
+                                                    {t.download}
+                                                </button>
+                                            )}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        function UpscalerView({ darkMode, t }) {
+            const [images, setImages] = useState([]);
+            const [scale, setScale] = useState(2);
+            const [isProcessing, setIsProcessing] = useState(false);
+
+            const handleImageSelect = (files) => {
+                const newImages = files.map(file => ({
+                    id: Math.random().toString(36).substr(2, 9),
+                    file,
+                    url: URL.createObjectURL(file),
+                    upscaledUrl: null,
+                    loading: false,
+                    progress: 0
+                }));
+                setImages(newImages);
+            };
+
+            const handleUpscale = async () => {
+                if (images.length === 0) return;
+                
+                setIsProcessing(true);
+                
+                for (let image of images) {
+                    if (image.upscaledUrl) continue;
+                    
+                    setImages(prev => prev.map(img => 
+                        img.id === image.id ? { ...img, loading: true, progress: 0 } : img
+                    ));
+                    
+                    // Simulate upscaling
+                    for (let progress = 0; progress <= 100; progress += 25) {
+                        await new Promise(resolve => setTimeout(resolve, 300));
+                        setImages(prev => prev.map(img => 
+                            img.id === image.id ? { ...img, progress } : img
+                        ));
+                    }
+                    
+                    // Simulate result
+                    setImages(prev => prev.map(img => 
+                        img.id === image.id ? { 
+                            ...img, 
+                            upscaledUrl: img.url,
+                            loading: false,
+                            progress: 100
+                        } : img
+                    ));
+                }
+                
+                setIsProcessing(false);
+            };
+
+            const handleDownload = (image) => {
+                if (!image.upscaledUrl) return;
+                
+                const link = document.createElement('a');
+                link.href = image.upscaledUrl;
+                link.download = `upscaled_${image.file.name}`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            };
+
+            const handleReset = () => {
+                images.forEach(img => URL.revokeObjectURL(img.url));
+                setImages([]);
+            };
+
+            return (
+                <div className="max-w-2xl mx-auto">
+                    {images.length === 0 ? (
+                        <div className="text-center space-y-4">
+                            <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-500">
+                                {t.upscaler}
+                            </h2>
+                            <p className="text-gray-300 text-sm">
+                                Increase image resolution with AI - Enhance photo quality up to 4x using artificial intelligence
+                            </p>
+                            <ImageUpload onImageSelect={handleImageSelect} darkMode={darkMode} t={t} />
+                        </div>
+                    ) : (
+                        <div className="space-y-4 fade-in">
+                            {/* Controls */}
+                            <div className="rounded-2xl p-4 glass-effect">
+                                <div className="space-y-4">
+                                    <div>
+                                        <label className="block text-sm font-medium mb-2 text-gray-300">
+                                            Scale: {scale}x
+                                        </label>
+                                        <input
+                                            type="range"
+                                            min="2"
+                                            max="4"
+                                            step="1"
+                                            value={scale}
+                                            onChange={(e) => setScale(e.target.value)}
+                                            className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-teal-500 bg-gray-700"
+                                            disabled={isProcessing}
+                                        />
+                                    </div>
+                                    <div className="flex space-x-2">
+                                        <button 
+                                            onClick={handleUpscale}
+                                            disabled={isProcessing}
+                                            className="flex-1 py-3 bg-teal-500 hover:bg-teal-600 disabled:bg-teal-800 text-white font-semibold rounded-xl transition-colors flex items-center justify-center space-x-2"
+                                        >
+                                            {isProcessing ? (
+                                                <>
+                                                    <div className="spinner h-4 w-4 border-2 border-white border-t-transparent rounded-full"></div>
+                                                    <span className="text-sm">{t.upscaling}</span>
+                                                </>
+                                            ) : (
+                                                <span className="text-sm">{t.upscale}</span>
+                                            )}
+                                        </button>
+                                        
+                                        <button
+                                            onClick={handleReset}
+                                            className="px-4 py-3 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-xl transition-colors"
+                                        >
+                                            <span className="text-sm">{t.reset}</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            {/* Image Grid */}
+                            <div className="grid grid-cols-1 gap-4">
+                                {images.map(image => (
+                                    <div key={image.id} className="rounded-2xl overflow-hidden glass-effect">
+                                        <div className="relative aspect-square">
+                                            {image.loading && (
+                                                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
+                                                    <div className="text-center">
+                                                        <div className="spinner h-8 w-8 border-4 border-teal-500 border-t-transparent rounded-full mx-auto mb-2"></div>
+                                                        <p className="text-sm text-white">{image.progress}%</p>
+                                                    </div>
+                                                </div>
+                                            )}
+                                            <img 
+                                                src={image.upscaledUrl || image.url} 
+                                                alt={image.file.name}
+                                                className="w-full h-full object-cover"
+                                            />
+                                            {image.upscaledUrl && (
+                                                <div className="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs">
+                                                    {t.processed}
+                                                </div>
+                                            )}
+                                        </div>
+                                        
+                                        <div className="p-4">
+                                            <p className="text-sm truncate mb-2 text-gray-300">
+                                                {image.file.name}
+                                            </p>
+                                            <div className="space-y-2 mb-3">
+                                                <div className="flex justify-between text-xs">
+                                                    <span className="text-gray-400">
+                                                        {image.upscaledUrl ? `Upscaled ${scale}x` : t.original}
+                                                    </span>
+                                                </div>
+                                                {image.loading && (
+                                                    <div className="w-full bg-gray-700 rounded-full h-2">
+                                                        <div 
+                                                            className="bg-teal-500 h-2 rounded-full progress-bar" 
+                                                            style={{ width: `${image.progress}%` }}
+                                                        ></div>
+                                                    </div>
+                                                )}
+                                            </div>
+                                            
+                                            {image.upscaledUrl && (
+                                                <button
+                                                    onClick={() => handleDownload(image)}
+                                                    className="w-full py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-colors"
+                                                >
+                                                    {t.download}
+                                                </button>
+                                            )}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        function ConverterView({ darkMode, t }) {
+            const [images, setImages] = useState([]);
+            const [targetFormat, setTargetFormat] = useState('webp');
+            const [isProcessing, setIsProcessing] = useState(false);
+
+            const formats = [
+                { id: 'webp', name: 'WEBP', desc: 'Modern Web Format' },
+                { id: 'png', name: 'PNG', desc: 'Lossless Quality' },
+                { id: 'jpg', name: 'JPG', desc: 'Compressed' },
+                { id: 'avif', name: 'AVIF', desc: 'Next Generation' }
+            ];
+
+            const handleImageSelect = (files) => {
+                const newImages = files.map(file => ({
+                    id: Math.random().toString(36).substr(2, 9),
+                    file,
+                    url: URL.createObjectURL(file),
+                    convertedUrl: null,
+                    loading: false,
+                    progress: 0
+                }));
+                setImages(newImages);
+            };
+
+            const handleConvert = async () => {
+                if (images.length === 0) return;
+                
+                setIsProcessing(true);
+                
+                for (let image of images) {
+                    if (image.convertedUrl) continue;
+                    
+                    setImages(prev => prev.map(img => 
+                        img.id === image.id ? { ...img, loading: true, progress: 0 } : img
+                    ));
+                    
+                    // Simulate conversion
+                    for (let progress = 0; progress <= 100; progress += 20) {
+                        await new Promise(resolve => setTimeout(resolve, 150));
+                        setImages(prev => prev.map(img => 
+                            img.id === image.id ? { ...img, progress } : img
+                        ));
+                    }
+                    
+                    // Simulate result
+                    setImages(prev => prev.map(img => 
+                        img.id === image.id ? { 
+                            ...img, 
+                            convertedUrl: img.url,
+                            loading: false,
+                            progress: 100
+                        } : img
+                    ));
+                }
+                
+                setIsProcessing(false);
+            };
+
+            const handleDownload = (image) => {
+                if (!image.convertedUrl) return;
+                
+                const link = document.createElement('a');
+                link.href = image.convertedUrl;
+                link.download = `converted_${image.file.name.split('.')[0]}.${targetFormat}`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            };
+
+            const handleReset = () => {
+                images.forEach(img => URL.revokeObjectURL(img.url));
+                setImages([]);
+            };
+
+            return (
+                <div className="max-w-2xl mx-auto">
+                    {images.length === 0 ? (
+                        <div className="text-center space-y-4">
+                            <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-500">
+                                {t.converter}
+                            </h2>
+                            <p className="text-gray-300 text-sm">
+                                Convert images between different formats - Support for WebP, PNG, JPG, and AVIF formats
+                            </p>
+                            <ImageUpload onImageSelect={handleImageSelect} darkMode={darkMode} t={t} />
+                        </div>
+                    ) : (
+                        <div className="space-y-4 fade-in">
+                            {/* Controls */}
+                            <div className="rounded-2xl p-4 glass-effect">
+                                <div className="space-y-4">
+                                    <div>
+                                        <label className="block text-sm font-medium mb-2 text-gray-300">
+                                            {t.format}
+                                        </label>
+                                        <div className="grid grid-cols-2 gap-2">
+                                            {formats.map(format => (
+                                                <button
+                                                    key={format.id}
+                                                    onClick={() => setTargetFormat(format.id)}
+                                                    className={`p-3 rounded-xl text-left transition-all ${
+                                                        targetFormat === format.id
+                                                            ? 'bg-teal-500 text-white'
+                                                            : 'bg-gray-700 hover:bg-gray-600'
+                                                    }`}
+                                                >
+                                                    <div className="font-semibold text-sm">{format.name}</div>
+                                                    <div className="text-xs opacity-75">{format.desc}</div>
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="flex space-x-2">
+                                        <button 
+                                            onClick={handleConvert}
+                                            disabled={isProcessing}
+                                            className="flex-1 py-3 bg-teal-500 hover:bg-teal-600 disabled:bg-teal-800 text-white font-semibold rounded-xl transition-colors flex items-center justify-center space-x-2"
+                                        >
+                                            {isProcessing ? (
+                                                <>
+                                                    <div className="spinner h-4 w-4 border-2 border-white border-t-transparent rounded-full"></div>
+                                                    <span className="text-sm">{t.converting}</span>
+                                                </>
+                                            ) : (
+                                                <span className="text-sm">{t.convert}</span>
+                                            )}
+                                        </button>
+                                        
+                                        <button
+                                            onClick={handleReset}
+                                            className="px-4 py-3 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-xl transition-colors"
+                                        >
+                                            <span className="text-sm">{t.reset}</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            {/* Image Grid */}
+                            <div className="grid grid-cols-1 gap-4">
+                                {images.map(image => (
+                                    <div key={image.id} className="rounded-2xl overflow-hidden glass-effect">
+                                        <div className="relative aspect-square">
+                                            {image.loading && (
+                                                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
+                                                    <div className="text-center">
+                                                        <div className="spinner h-8 w-8 border-4 border-teal-500 border-t-transparent rounded-full mx-auto mb-2"></div>
+                                                        <p className="text-sm text-white">{image.progress}%</p>
+                                                    </div>
+                                                </div>
+                                            )}
+                                            <img 
+                                                src={image.convertedUrl || image.url} 
+                                                alt={image.file.name}
+                                                className="w-full h-full object-cover"
+                                            />
+                                            {image.convertedUrl && (
+                                                <div className="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs">
+                                                    {targetFormat.toUpperCase()}
+                                                </div>
+                                            )}
+                                        </div>
+                                        
+                                        <div className="p-4">
+                                            <p className="text-sm truncate mb-2 text-gray-300">
+                                                {image.file.name}
+                                            </p>
+                                            <div className="space-y-2 mb-3">
+                                                <div className="flex justify-between text-xs">
+                                                    <span className="text-gray-400">
+                                                        {image.convertedUrl ? `${targetFormat.toUpperCase()}` : t.original}
+                                                    </span>
+                                                </div>
+                                                {image.loading && (
+                                                    <div className="w-full bg-gray-700 rounded-full h-2">
+                                                        <div 
+                                                            className="bg-teal-500 h-2 rounded-full progress-bar" 
+                                                            style={{ width: `${image.progress}%` }}
+                                                        ></div>
+                                                    </div>
+                                                )}
+                                            </div>
+                                            
+                                            {image.convertedUrl && (
+                                                <button
+                                                    onClick={() => handleDownload(image)}
+                                                    className="w-full py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-colors"
+                                                >
+                                                    {t.download}
+                                                </button>
+                                            )}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        function BatchView({ darkMode, t }) {
+            const [images, setImages] = useState([]);
+            const [batchSettings, setBatchSettings] = useState({
+                applyToAll: true,
+                preserveStructure: false,
+                outputFormat: 'original'
+            });
+            const [isProcessing, setIsProcessing] = useState(false);
+
+            const handleImageSelect = (files) => {
+                const newImages = files.map(file => ({
+                    id: Math.random().toString(36).substr(2, 9),
+                    file,
+                    url: URL.createObjectURL(file),
+                    processed: false,
+                    loading: false,
+                    progress: 0
+                }));
+                setImages(newImages);
+            };
+
+            const handleBatchProcess = async () => {
+                if (images.length === 0) return;
+                
+                setIsProcessing(true);
+                
+                for (let image of images) {
+                    if (image.processed) continue;
+                    
+                    setImages(prev => prev.map(img => 
+                        img.id === image.id ? { ...img, loading: true, progress: 0 } : img
+                    ));
+                    
+                    // Simulate batch processing
+                    for (let progress = 0; progress <= 100; progress += 10) {
+                        await new Promise(resolve => setTimeout(resolve, 100));
+                        setImages(prev => prev.map(img => 
+                            img.id === image.id ? { ...img, progress } : img
+                        ));
+                    }
+                    
+                    setImages(prev => prev.map(img => 
+                        img.id === image.id ? { 
+                            ...img, 
+                            processed: true,
+                            loading: false,
+                            progress: 100
+                        } : img
+                    ));
+                }
+                
+                setIsProcessing(false);
+            };
+
+            const handleDownloadAll = () => {
+                images.forEach(image => {
+                    if (image.processed) {
+                        const link = document.createElement('a');
+                        link.href = image.url;
+                        link.download = `batch_${image.file.name}`;
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                    }
+                });
+            };
+
+            const handleReset = () => {
+                images.forEach(img => URL.revokeObjectURL(img.url));
+                setImages([]);
+            };
+
+            return (
+                <div className="max-w-2xl mx-auto">
+                    {images.length === 0 ? (
+                        <div className="text-center space-y-4">
+                            <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-500">
+                                {t.batch} Processor
+                            </h2>
+                            <p className="text-gray-300 text-sm">
+                                Process multiple images at once - Save time with batch image processing
+                            </p>
+                            <ImageUpload onImageSelect={handleImageSelect} darkMode={darkMode} t={t} />
+                        </div>
+                    ) : (
+                        <div className="space-y-4 fade-in">
+                            {/* Controls */}
+                            <div className="rounded-2xl p-4 glass-effect">
+                                <div className="space-y-4">
+                                    <div className="grid grid-cols-1 gap-3">
+                                        <label className="flex items-center space-x-3">
+                                            <input 
+                                                type="checkbox" 
+                                                checked={batchSettings.applyToAll}
+                                                onChange={(e) => setBatchSettings(prev => ({
+                                                    ...prev,
+                                                    applyToAll: e.target.checked
+                                                }))}
+                                                className="rounded accent-teal-500"
+                                            />
+                                            <span className="text-sm">{t.applyToAll}</span>
+                                        </label>
+                                        <label className="flex items-center space-x-3">
+                                            <input 
+                                                type="checkbox" 
+                                                checked={batchSettings.preserveStructure}
+                                                onChange={(e) => setBatchSettings(prev => ({
+                                                    ...prev,
+                                                    preserveStructure: e.target.checked
+                                                }))}
+                                                className="rounded accent-teal-500"
+                                            />
+                                            <span className="text-sm">{t.preserveStructure}</span>
+                                        </label>
+                                    </div>
+                                    
+                                    <div className="flex space-x-2">
+                                        <button 
+                                            onClick={handleBatchProcess}
+                                            disabled={isProcessing}
+                                            className="flex-1 py-3 bg-teal-500 hover:bg-teal-600 disabled:bg-teal-800 text-white font-semibold rounded-xl transition-colors flex items-center justify-center space-x-2"
+                                        >
+                                            {isProcessing ? (
+                                                <>
+                                                    <div className="spinner h-4 w-4 border-2 border-white border-t-transparent rounded-full"></div>
+                                                    <span className="text-sm">Processing...</span>
+                                                </>
+                                            ) : (
+                                                <span className="text-sm">Process All</span>
+                                            )}
+                                        </button>
+                                        
+                                        {images.some(img => img.processed) && (
+                                            <button
+                                                onClick={handleDownloadAll}
+                                                className="px-4 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-xl transition-colors"
+                                            >
+                                                <span className="text-sm">Download All</span>
+                                            </button>
+                                        )}
+                                        
+                                        <button
+                                            onClick={handleReset}
+                                            className="px-4 py-3 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-xl transition-colors"
+                                        >
+                                            <span className="text-sm">{t.reset}</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Batch Info */}
+                            <div className="rounded-2xl p-4 glass-effect">
+                                <div className="flex justify-between items-center">
+                                    <div>
+                                        <div className="text-sm font-semibold">{images.length} images</div>
+                                        <div className="text-xs text-gray-400">
+                                            {images.filter(img => img.processed).length} processed
+                                        </div>
+                                    </div>
+                                    <div className="text-right">
+                                        <div className="text-sm font-semibold">
+                                            {((images.filter(img => img.processed).length / images.length) * 100).toFixed(0)}%
+                                        </div>
+                                        <div className="text-xs text-gray-400">Complete</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            {/* Image Grid */}
+                            <div className="grid grid-cols-1 gap-4">
+                                {images.map(image => (
+                                    <div key={image.id} className="rounded-2xl overflow-hidden glass-effect">
+                                        <div className="relative aspect-square">
+                                            {image.loading && (
+                                                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
+                                                    <div className="text-center">
+                                                        <div className="spinner h-8 w-8 border-4 border-teal-500 border-t-transparent rounded-full mx-auto mb-2"></div>
+                                                        <p className="text-sm text-white">{image.progress}%</p>
+                                                    </div>
+                                                </div>
+                                            )}
+                                            <img 
+                                                src={image.url} 
+                                                alt={image.file.name}
+                                                className="w-full h-full object-cover"
+                                            />
+                                            {image.processed && (
+                                                <div className="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded-full text-xs">
+                                                    {t.processed}
+                                                </div>
+                                            )}
+                                        </div>
+                                        
+                                        <div className="p-4">
+                                            <p className="text-sm truncate mb-2 text-gray-300">
+                                                {image.file.name}
+                                            </p>
+                                            <div className="space-y-2">
+                                                {image.loading && (
+                                                    <div className="w-full bg-gray-700 rounded-full h-2">
+                                                        <div 
+                                                            className="bg-teal-500 h-2 rounded-full progress-bar" 
+                                                            style={{ width: `${image.progress}%` }}
+                                                        ></div>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        function AnalyticsView({ darkMode, t }) {
+            const [stats, setStats] = useState({
+                totalImages: 1247,
+                totalSaved: 245.6,
+                favoriteTool: 'compressor',
+                conversionRate: 87
+            });
+
+            const [history, setHistory] = useState([
+                { id: 1, action: 'Compressed', filename: 'photo1.jpg', date: '2024-01-15', saved: 2.4 },
+                { id: 2, action: 'Edited', filename: 'portrait.png', date: '2024-01-14', saved: 0 },
+                { id: 3, action: 'Upscaled', filename: 'landscape.jpg', date: '2024-01-14', saved: 0 },
+                { id: 4, action: 'Converted', filename: 'image.webp', date: '2024-01-13', saved: 1.2 }
+            ]);
+
+            return (
+                <div className="max-w-4xl mx-auto">
+                    <div className="text-center space-y-4 mb-8">
+                        <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-500">
+                            {t.analytics}
+                        </h2>
+                        <p className="text-gray-300 text-sm">
+                            Track your image processing statistics and savings - Monitor your usage across all tools
+                        </p>
+                    </div>
+
+                    {/* Stats Grid */}
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                        <div className="rounded-2xl p-6 glass-effect text-center">
+                            <div className="text-3xl font-bold text-teal-400">{stats.totalImages}</div>
+                            <div className="text-sm text-gray-400 mt-1">Total Images</div>
+                        </div>
+                        <div className="rounded-2xl p-6 glass-effect text-center">
+                            <div className="text-3xl font-bold text-cyan-400">{stats.totalSaved}MB</div>
+                            <div className="text-sm text-gray-400 mt-1">{t.totalSaved}</div>
+                        </div>
+                        <div className="rounded-2xl p-6 glass-effect text-center">
+                            <div className="text-3xl font-bold text-purple-400">{stats.conversionRate}%</div>
+                            <div className="text-sm text-gray-400 mt-1">Success Rate</div>
+                        </div>
+                        <div className="rounded-2xl p-6 glass-effect text-center">
+                            <div className="text-3xl font-bold text-green-400">
+                                {stats.favoriteTool === 'compressor' ? '📦' : 
+                                 stats.favoriteTool === 'editor' ? '🎨' : '🔍'}
+                            </div>
+                            <div className="text-sm text-gray-400 mt-1">Top Tool</div>
+                        </div>
+                    </div>
+
+                    {/* Recent Activity */}
+                    <div className="rounded-2xl p-6 glass-effect">
+                        <h3 className="font-semibold mb-4">Recent Activity</h3>
+                        <div className="space-y-3">
+                            {history.map(item => (
+                                <div key={item.id} className="flex items-center justify-between p-3 bg-gray-800 rounded-xl">
+                                    <div className="flex items-center space-x-3">
+                                        <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
+                                            item.action === 'Compressed' ? 'bg-teal-500' :
+                                            item.action === 'Edited' ? 'bg-purple-500' :
+                                            item.action === 'Upscaled' ? 'bg-blue-500' : 'bg-orange-500'
+                                        }`}>
+                                            {item.action === 'Compressed' ? '📦' :
+                                             item.action === 'Edited' ? '🎨' :
+                                             item.action === 'Upscaled' ? '🔍' : '🔄'}
+                                        </div>
+                                        <div>
+                                            <div className="text-sm font-medium">{item.action} • {item.filename}</div>
+                                            <div className="text-xs text-gray-400">{item.date}</div>
+                                        </div>
+                                    </div>
+                                    {item.saved > 0 && (
+                                        <div className="text-sm text-green-400">+{item.saved}MB saved</div>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Privacy Settings */}
+                    <div className="rounded-2xl p-6 glass-effect mt-6">
+                        <h3 className="font-semibold mb-4">{t.privacySettings}</h3>
+                        <div className="space-y-3">
+                            <label className="flex items-center space-x-3">
+                                <input type="checkbox" className="rounded accent-teal-500" defaultChecked />
+                                <span className="text-sm">{t.allowDataCollection}</span>
+                            </label>
+                            <label className="flex items-center space-x-3">
+                                <input type="checkbox" className="rounded accent-teal-500" defaultChecked />
+                                <span className="text-sm">{t.acceptCookies}</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        function CloudView({ darkMode, t }) {
+            const [cloudServices, setCloudServices] = useState([
+                { id: 'dropbox', name: 'Dropbox', connected: false, icon: '📦' },
+                { id: 'gdrive', name: 'Google Drive', connected: false, icon: '🚀' },
+                { id: 'onedrive', name: 'OneDrive', connected: false, icon: '☁️' },
+                { id: 'icloud', name: 'iCloud', connected: false, icon: '🍎' }
+            ]);
+
+            const handleConnect = (serviceId) => {
+                setCloudServices(prev => prev.map(service => 
+                    service.id === serviceId 
+                        ? { ...service, connected: !service.connected }
+                        : service
+                ));
+            };
+
+            return (
+                <div className="max-w-2xl mx-auto">
+                    <div className="text-center space-y-4 mb-8">
+                        <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-500">
+                            {t.cloud} Integration
+                        </h2>
+                        <p className="text-gray-300 text-sm">
+                            Connect your cloud storage services - Access your images from anywhere
+                        </p>
+                    </div>
+
+                    <div className="space-y-4">
+                        {cloudServices.map(service => (
+                            <div key={service.id} className="rounded-2xl p-6 glass-effect">
+                                <div className="flex items-center justify-between">
+                                    <div className="flex items-center space-x-4">
+                                        <div className="text-2xl">{service.icon}</div>
+                                        <div>
+                                            <div className="font-semibold">{service.name}</div>
+                                            <div className={`text-sm ${service.connected ? 'text-green-400' : 'text-gray-400'}`}>
+                                                {service.connected ? 'Connected' : 'Not connected'}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        onClick={() => handleConnect(service.id)}
+                                        className={`px-6 py-2 rounded-xl font-semibold transition-colors ${
+                                            service.connected
+                                                ? 'bg-gray-700 hover:bg-gray-600 text-white'
+                                                : 'bg-teal-500 hover:bg-teal-600 text-white'
+                                        }`}
+                                    >
+                                        {service.connected ? t.disconnect : t.connect}
+                                    </button>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Sync Status */}
+                    <div className="rounded-2xl p-6 glass-effect mt-6">
+                        <h3 className="font-semibold mb-4">Sync Status</h3>
+                        <div className="space-y-3">
+                            <div className="flex justify-between items-center">
+                                <span className="text-sm">Last sync</span>
+                                <span className="text-sm text-gray-400">2 hours ago</span>
+                            </div>
+                            <div className="flex justify-between items-center">
+                                <span className="text-sm">Files synced</span>
+                                <span className="text-sm text-gray-400">247</span>
+                            </div>
+                            <div className="flex justify-between items-center">
+                                <span className="text-sm">Storage used</span>
+                                <span className="text-sm text-gray-400">1.2GB / 15GB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        function SettingsView({ darkMode, t, theme, setTheme, accentColor, setAccentColor }) {
+            const [privacySettings, setPrivacySettings] = useState({
+                dataCollection: false,
+                cookies: true,
+                analytics: true
+            });
+
+            const themes = [
+                { id: 'modern', name: 'Modern Teal', color: '#0d9488' },
+                { id: 'professional', name: 'Professional Blue', color: '#2563eb' },
+                { id: 'creative', name: 'Creative Purple', color: '#7c3aed' },
+                { id: 'minimal', name: 'Minimal Gray', color: '#6b7280' }
+            ];
+
+            const [history, setHistory] = useState([
+                { id: 1, action: 'Compressed', filename: 'photo1.jpg', date: '2024-01-15' },
+                { id: 2, action: 'Edited', filename: 'portrait.png', date: '2024-01-14' },
+                { id: 3, action: 'Upscaled', filename: 'landscape.jpg', date: '2024-01-14' }
+            ]);
+
+            const handleClearHistory = () => {
+                setHistory([]);
+            };
+
+            return (
+                <div className="max-w-2xl mx-auto">
+                    <div className="text-center space-y-4 mb-8">
+                        <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-500">
+                            {t.settings}
+                        </h2>
+                        <p className="text-gray-300 text-sm">
+                            Customize your experience - Personalize Alpha Image Tools to your preferences
+                        </p>
+                    </div>
+
+                    {/* Theme Settings */}
+                    <div className="rounded-2xl p-6 glass-effect mb-6">
+                        <h3 className="font-semibold mb-4">{t.theme}</h3>
+                        <div className="grid grid-cols-2 gap-3">
+                            {themes.map(themeOption => (
+                                <button
+                                    key={themeOption.id}
+                                    onClick={() => {
+                                        setTheme(themeOption.id);
+                                        setAccentColor(themeOption.color);
+                                    }}
+                                    className={`p-4 rounded-xl text-left transition-all ${
+                                        theme === themeOption.id
+                                            ? 'ring-2 ring-teal-500 bg-teal-500 bg-opacity-20'
+                                            : 'bg-gray-700 hover:bg-gray-600'
+                                    }`}
+                                >
+                                    <div 
+                                        className="w-6 h-6 rounded-full mb-2"
+                                        style={{ backgroundColor: themeOption.color }}
+                                    ></div>
+                                    <div className="font-semibold text-sm">{themeOption.name}</div>
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Privacy Settings */}
+                    <div className="rounded-2xl p-6 glass-effect mb-6">
+                        <h3 className="font-semibold mb-4">{t.privacySettings}</h3>
+                        <div className="space-y-3">
+                            <label className="flex items-center space-x-3">
+                                <input 
+                                    type="checkbox" 
+                                    checked={privacySettings.dataCollection}
+                                    onChange={(e) => setPrivacySettings(prev => ({
+                                        ...prev,
+                                        dataCollection: e.target.checked
+                                    }))}
+                                    className="rounded accent-teal-500"
+                                />
+                                <span className="text-sm">{t.allowDataCollection}</span>
+                            </label>
+                            <label className="flex items-center space-x-3">
+                                <input 
+                                    type="checkbox" 
+                                    checked={privacySettings.cookies}
+                                    onChange={(e) => setPrivacySettings(prev => ({
+                                        ...prev,
+                                        cookies: e.target.checked
+                                    }))}
+                                    className="rounded accent-teal-500"
+                                />
+                                <span className="text-sm">{t.acceptCookies}</span>
+                            </label>
+                            <label className="flex items-center space-x-3">
+                                <input 
+                                    type="checkbox" 
+                                    checked={privacySettings.analytics}
+                                    onChange={(e) => setPrivacySettings(prev => ({
+                                        ...prev,
+                                        analytics: e.target.checked
+                                    }))}
+                                    className="rounded accent-teal-500"
+                                />
+                                <span className="text-sm">Enable usage analytics</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    {/* History */}
+                    <div className="rounded-2xl p-6 glass-effect">
+                        <div className="flex justify-between items-center mb-4">
+                            <h3 className="font-semibold">{t.history}</h3>
+                            <button
+                                onClick={handleClearHistory}
+                                className="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm transition-colors"
+                            >
+                                {t.clearHistory}
+                            </button>
+                        </div>
+                        <div className="space-y-3">
+                            {history.length === 0 ? (
+                                <div className="text-center py-8 text-gray-400">
+                                    No history yet
+                                </div>
+                            ) : (
+                                history.map(item => (
+                                    <div key={item.id} className="flex items-center justify-between p-3 bg-gray-800 rounded-xl">
+                                        <div className="flex items-center space-x-3">
+                                            <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
+                                                item.action === 'Compressed' ? 'bg-teal-500' :
+                                                item.action === 'Edited' ? 'bg-purple-500' : 'bg-blue-500'
+                                            }`}>
+                                                {item.action === 'Compressed' ? '📦' :
+                                                 item.action === 'Edited' ? '🎨' : '🔍'}
+                                            </div>
+                                            <div>
+                                                <div className="text-sm font-medium">{item.action} • {item.filename}</div>
+                                                <div className="text-xs text-gray-400">{item.date}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))
+                            )}
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        // Render the app
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Alpha Image Tools",
+        "description": "Free AI-powered online image processing tools including compressor, editor, upscaler and converter. GDPR compliant for European users.",
+        "url": "https://alphaimagetools.com",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Any",
+        "permissions": "browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "European Union"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Alpha Image Tools",
+            "url": "https://alphaimagetools.com"
+        },
+        "featureList": "Image Compression, AI Editing, Upscaling, Format Conversion, Batch Processing, Cloud Integration",
+        "countriesSupported": ["DE", "FR", "ES", "IT", "GB", "NL", "BE", "SE", "NO", "DK", "FI", "AT", "CH", "PL", "CZ", "HU", "RO", "BG", "GR", "PT", "IE"]
+    }
+    </script>
+</body>
+</html>
